@@ -5,16 +5,16 @@
 <table class="table table-fluid">
         <tr>
             <th>Data</th>
-            <th>View</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Voir</th>
+            <th>Editer</th>
+            <th>Supprimer</th>
         </tr>
         {% for Data in object_list %}
         <tr>
             <td>{{ Data }}</td>
-            <td><a href="{% url "data_detail" Data.id %}">view</a></td>
-            <td><a href="{% url "data_update" Data.id %}">edit</a></td>
-            <td><a href="{% url "data_delete" Data.id %}">delete</a></td>
+            <td><a href="{% url "data_detail" Data.id %}">Voir</a></td>
+            <td><a href="{% url "data_update" Data.id %}">Editer</a></td>
+            <td><a href="{% url "data_delete" Data.id %}">Supprimer</a></td>
         </tr>
         {% endfor %}
 </table>

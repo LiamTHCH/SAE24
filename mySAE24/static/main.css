@@ -288,6 +288,11 @@ li.dropdown {
     flex-direction: column;
     margin: auto;
 }
+.filter form{
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 10px;
+}
 
 .filter > * {
     padding: 20px;
@@ -343,8 +348,19 @@ h2{
 	 margin: 80px 0 0 10px;
 	 text-align: left;
      height: 68vh;
-
 }
+
+
+.tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .tabs {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
  .tabs li {
 	 float: left;
 	 display: block;
@@ -425,6 +441,7 @@ h2{
 .export{
     padding-top: 10px;
     text-decoration: none;
+    flex-grow: 100%;
 }
 
 
@@ -494,3 +511,4 @@ form{
     flex-direction: row;
     text-align: center;
 }
+

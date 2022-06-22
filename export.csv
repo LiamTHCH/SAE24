@@ -1,0 +1,19 @@
+ID,ID_Capteur,Temperature,Date/Heure,nom,piece,emplacement
+1,A72E3F6B79BB,22.5,2022-06-22 18:50:56+00:00,chambre1,chambre1,chambre1
+4,A72E3F6B79BB,19.37,2022-06-22 21:30:33+00:00,chambre1,chambre1,chambre1
+6,A72E3F6B79BB,23.15,2022-06-22 21:30:38+00:00,chambre1,chambre1,chambre1
+8,A72E3F6B79BB,7.43,2022-06-22 21:30:43+00:00,chambre1,chambre1,chambre1
+10,A72E3F6B79BB,3.24,2022-06-22 21:30:48+00:00,chambre1,chambre1,chambre1
+12,A72E3F6B79BB,19.2,2022-06-22 21:30:53+00:00,chambre1,chambre1,chambre1
+14,A72E3F6B79BB,11.17,2022-06-22 21:30:58+00:00,chambre1,chambre1,chambre1
+16,A72E3F6B79BB,3.39,2022-06-22 21:31:03+00:00,chambre1,chambre1,chambre1
+18,A72E3F6B79BB,6.87,2022-06-22 21:40:29+00:00,chambre1,chambre1,chambre1
+20,A72E3F6B79BB,18.57,2022-06-22 21:40:34+00:00,chambre1,chambre1,chambre1
+22,A72E3F6B79BB,20.77,2022-06-22 21:40:39+00:00,chambre1,chambre1,chambre1
+24,A72E3F6B79BB,21.07,2022-06-22 21:40:44+00:00,chambre1,chambre1,chambre1
+26,A72E3F6B79BB,11.48,2022-06-22 21:40:49+00:00,chambre1,chambre1,chambre1
+28,A72E3F6B79BB,13.18,2022-06-22 21:40:54+00:00,chambre1,chambre1,chambre1
+30,A72E3F6B79BB,4.36,2022-06-22 21:40:59+00:00,chambre1,chambre1,chambre1
+32,A72E3F6B79BB,2.13,2022-06-22 21:41:04+00:00,chambre1,chambre1,chambre1
+34,A72E3F6B79BB,11.19,2022-06-22 21:41:09+00:00,chambre1,chambre1,chambre1
+36,A72E3F6B79BB,3.52,2022-06-22 21:41:14+00:00,chambre1,chambre1,chambre1

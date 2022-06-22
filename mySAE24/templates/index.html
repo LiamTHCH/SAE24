@@ -1,27 +1,120 @@
 {% extends "main.html" %}
 {% block content %}
- <h1> Liste des donnees: </h1>
-  {% if count == 0 %}
-    <h2 class="error"> Aucune donnee n'a ete recue </h2>
-  {% else %}
-<table>
-  <tr>
-    <th> Température </th>
-    <th> Date </th>
-    <th> Piece </th>
-    <th> Emplacement </th>
-    <th> Capteur </th>
-  </tr>
-  {% for i in data %}
-  <tr>
-    <td> {{i.temp}} </td>
-    <td> {{i.timestamp}} </td>
-    <td> {{i.capteur.piece}} </td>
-    <td> {{i.capteur.emplacement}} </td>
-    <td> {{i.capteur.nom}} </td>
-  </tr>
-  {% endfor %}
-  {% endif %}
-</table>
+  <div class="filter">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <ul>
+        <select name="capteur">
+          <option value="*">Tout les capteurs</option>
+          {% for capteur in cap %}
+          <option value="{{capteur.id}}">{{capteur.nom}}</option>
+          {% endfor %}
+      </select>
+        <label for="start">Start date:</label>
+        <input type="date" name="start">
+        <label for="stop">Stop date:</label>
+        <input type="date" name="stop">
+        <input type="submit" value="Appliquer">
+      </ul>
+    </form>
+
+  </div>
+
+<div class="content">
+  <ul class="tabs" role="tablist">
+      <li>
+          <input type="radio" name="tabs" id="tab1" checked />
+          <label for="tab1" 
+                 role="tab" 
+                 aria-selected="true" 
+                 aria-controls="panel1" 
+                 tabindex="0">Données Brutes</label>
+          <div id="tab-content1" 
+               class="tab-content" 
+               role="tabpanel" 
+               aria-labelledby="description" 
+               aria-hidden="false">
+            
+               <div class="raw_data" id="raw_data">
+                <h2 class="titre">Données Brutes</h2>
+                  {% if data.count == 0 %}
+                    <h2 class="error"> Pas de Données </h2>
+                  {% else %}
+                <table>
+                  <tr>
+                    <th> Température </th>
+                    <th> Date </th>
+                    <th> Piece </th>
+                    <th> Emplacement </th>
+                    <th> Capteur </th>
+                  </tr>
+                  {% for i in data %}
+                  <tr>
+                    <td> {{i.temp}} </td>
+                    <td> {{i.timestamp}} </td>
+                    <td> {{i.capteur.piece}} </td>
+                    <td> {{i.capteur.emplacement}} </td>
+                    <td> {{i.capteur.nom}} </td>
+                  </tr>
+                  {% endfor %}
+                  {% endif %}
+                </table>
+              </div>
+
+
+
+
+          </div>
+      </li>
+    
+      <li>
+          <input type="radio" name="tabs" id="tab2" />
+          <label for="tab2"
+                 role="tab" 
+                 aria-selected="false" 
+                 aria-controls="panel2" 
+                 tabindex="0">Graphique</label>
+          <div id="tab-content2" 
+               class="tab-content"
+               role="tabpanel" 
+               aria-labelledby="specification" 
+               aria-hidden="true">
+               <div id="chart" class="chart">
+                <h2>Graphique</h2>
+                <canvas id="myChart" width="400" height="100"></canvas>  
+              </div>
+          </div>
+      </li>
+  </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const labels = [
+  {% for i in data %} "{{i.timestamp}}", {% endfor %}
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Temperature',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [{% for i in data %} "{{i.temp}}", {% endfor %}],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+</script>
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
+
 
 {% endblock content %}

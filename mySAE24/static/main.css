@@ -16,7 +16,7 @@ body{background-color:#B0C4DE;font-family:system-ui,arial;display:flex;align-ite
     margin-top:30px;
 }
 
-table{border-collapse: collapse;margin-top:90px;}
+table{border-collapse: collapse;margin-top:30px;}
 table > tbody > tr > th, table > tbody > tr > td{padding:20px;border:1px solid #222;background:white;font-family:tahoma;width:200px;text-align:center;}
 table > tbody > tr > th{background:#6495ED;color:#EEE;}
 
@@ -280,3 +280,141 @@ li.dropdown {
   .closebtn:hover {
     color: black;
   }
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.filter > * {
+    padding: 20px;
+}
+
+
+
+
+
+h2{
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.raw_data{
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;      /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+}
+
+
+
+
+@import "compass/css3";
+ @import url("https://fonts.googleapis.com/css?family=Lato");
+ * {
+	 margin: 0;
+	 padding: 0;
+}
+
+ h1 {
+	 font-weight: normal;
+	 font-size: 40px;
+	 font-weight: normal;
+	 text-transform: uppercase;
+	 float: left;
+	 margin: 20px 0 100px 10px;
+}
+ h1 span {
+	 font-size: 13px;
+	 display: block;
+	 padding-left: 4px;
+}
+ .tabs {
+	 width: 100%;
+	 float: none;
+	 list-style: none;
+	 position: relative;
+	 margin: 80px 0 0 10px;
+	 text-align: left;
+     height: 70vh;
+
+}
+ .tabs li {
+	 float: left;
+	 display: block;
+}
+ .tabs input[type="radio"] {
+	 position: absolute;
+	 top: 0;
+	 left: -9999px;
+}
+ .tabs label {
+	 display: block;
+	 padding: 14px 21px;
+	 border-radius: 2px 2px 0 0;
+	 font-size: 20px;
+	 font-weight: normal;
+	 text-transform: uppercase;
+	 background: #8e44ad;
+	 cursor: pointer;
+	 position: relative;
+	 top: 4px;
+}
+ .tabs label:hover {
+	 background: #703688;
+}
+ .tabs .tab-content {
+	 z-index: 2;
+	 display: none;
+	 overflow: hidden;
+	 width: 100%;
+	 font-size: 17px;
+	 line-height: 25px;
+	 padding: 25px;
+	 position: absolute;
+	 top: 53px;
+	 left: 0;
+	 background: #612e76;
+}
+ .tabs [id^="tab"]:checked + label {
+	 top: 0;
+	 padding-top: 17px;
+	 background: #612e76;
+}
+ .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+	 display: block;
+}
+ p.link {
+	 clear: both;
+	 margin: 380px 0 0 15px;
+}
+ p.link a {
+	 text-transform: uppercase;
+	 text-decoration: none;
+	 display: inline-block;
+	 color: #fff;
+	 padding: 5px 10px;
+	 margin: 0 5px;
+	 background-color: #612e76;
+}
+ p.link a:hover {
+	 background-color: #522764;
+}
+ 
+.content{
+    width: 90vw;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+
+.block{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

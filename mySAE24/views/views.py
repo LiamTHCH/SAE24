@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from .models import *
+from mySAE24.models import *
 import datetime
 import csv
 from django.http.response import HttpResponse
+from django.http import HttpResponseRedirect,HttpResponseBadRequest
 import mimetypes
 def index(request):
 	if request.method == 'POST':
@@ -62,3 +63,10 @@ def csv_export(request):
 	response = HttpResponse(path)
 	response['Content-Disposition'] = "attachment; filename=%s" % 'export.csv'
 	return response
+
+def data(req):
+	return HttpResponseRedirect("/data/list/")
+
+
+def capteur(req):
+	return HttpResponseRedirect("/capteur/list/")

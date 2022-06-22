@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block content %}
+<h2 class="form-title">Modifier une donnée</h2>
+<form method="post">
+    {% csrf_token %}
+    
+    <div>
+    <table>
+        <tr>
+            <th>Temp</th>
+            <th>Date</th>
+            <th>Capteur</th>
+        </tr>
+        <tr>
+            <td>{{ form.temp }}</td>
+            <td>{{ form.timestamp }}</td>
+            <td>{{ form.capteur }}</td>
+        </tr>
+    </div>
+    <input type="submit" value="Valider" class="submit"/>
+</form>
+{% endblock content %}

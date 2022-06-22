@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+<h2 class="form-title">Capteur</h2>
+
+<table>
+        <tr>
+            <th>Capteur</th>
+            <th>Voir</th>
+            <th>Editer</th>
+            <th>Supprimer</th>
+        </tr>
+        {% for Capteur in object_list %}
+        <tr>
+            <td>{{ Capteur }}</td>
+            <td><a href="{% url "capteur_detail" Capteur.id %}">Voir</a></td>
+            <td><a href="{% url "capteur_update" Capteur.id %}">Editer</a></td>
+            <td><a href="{% url "capteur_delete" Capteur.id %}">Supprimer</a></td>
+        </tr>
+        {% endfor %}
+</table>
+</div>
+
+<a href="{% url "capteur_create" %}">Nouveau Capteur</a>
+{% endblock content %}

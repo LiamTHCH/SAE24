@@ -1,0 +1,5 @@
+from .capteur_delete_test import CapteurDeleteTestCase
+from .capteur_update_test import CapteurUpdateTestCase
+from .capteur_detail_test import CapteurDetailTestCase
+from .capteur_create_test import CapteurCreateTestCase
+from .capteur_list_test import CapteurListTestCase

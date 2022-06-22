@@ -53,7 +53,9 @@ h1{
     display:flex;
     flex-direction:row;
 }
-
+.nav-list a{
+ padding-right: 10px;
+}
 .nav-list .list-item{
     display:inline-block;
     padding:20px 10px;
@@ -430,6 +432,7 @@ a {
     display: block;
     position: relative;
     padding: 0.2em 0;
+    text-decoration: none;
   }
   
   /* Fade in */
@@ -465,3 +468,29 @@ a:hover::after,
 a:focus::after{
     transform: translate3d(0, 0, 0);
   }
+
+table a{
+    text-decoration: none;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
+form table{
+    margin: 20px;
+}
+
+.submit{
+    color: black;
+    background-color: white;
+    height: 4em;
+    width: 8em;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}

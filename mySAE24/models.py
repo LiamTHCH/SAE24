@@ -20,7 +20,7 @@ class Data(models.Model):
     capteur = models.ForeignKey(Capteur, on_delete=models.CASCADE,blank=False)
 
     def __str__(self):
-        chaine = self.temp + "," + str(self.timestamp) + "," + self.capteur.piece + " | " + self.capteur.nom
+        chaine = self.temp + "°C " + self.capteur.id
         return chaine
 
     def dico(self):

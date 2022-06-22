@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block content %}
+<h2 class="form-title">Editer Capteur</h2>
+<form method="post">
+    {% csrf_token %}
+    
+    <div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Piece</th>
+            <th>Emplacement</th>
+        </tr>
+        <tr>
+            <td>{{ form.id }}</td>
+            <td>{{ form.nom }}</td>
+            <td>{{ form.piece }}</td>
+            <td>{{ form.emplacement }}</td>
+        </tr>
+    </div>
+    <input type="submit" value="Valider" class="submit"/>
+</form>
+{% endblock content %}

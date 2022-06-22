@@ -1,0 +1,8 @@
+{% extends "main.html" %}
+{% block content %}
+<h2 class="form-title"> Delete Capteur </h2>
+<form method="post">{% csrf_token %}
+    <p>Etes vous sur de vouloir supprimer le capteur : "{{ object }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
+{% endblock content %}

@@ -1,5 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
   <div class="filter">
     <form action="" method="POST">
       {% csrf_token %}
@@ -16,8 +18,8 @@
         <input type="date" name="stop">
         <input type="submit" value="Appliquer">
       </ul>
+      <a href="/csv" class="export">Exporter en CSV</a>
     </form>
-
   </div>
 
 <div class="content">
